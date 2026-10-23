@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#174ea6">
 <link rel="manifest" href="manifest.json">
-<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<link rel="apple-touch-icon" href="icon.svg">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Anestezi Ağırlık">
@@ -13,17 +14,18 @@
 <style>
 :root{color-scheme:light;--ink:#17212f;--muted:#596579;--line:#d7dee8;--panel:#f4f7fb;--blue:#174ea6;--warn:#fff5dc}
 *{box-sizing:border-box}body{margin:0;background:#edf1f6;color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+.brand{display:flex;align-items:center;gap:14px;margin-bottom:8px}.brand img{width:68px;height:68px;flex:0 0 68px;border-radius:16px}.brand h1{margin:0 0 6px}.brand .sub{margin:0}
 main{max-width:900px;margin:22px auto;padding:0 14px}h1{font-size:clamp(1.5rem,4vw,2.1rem);line-height:1.2;margin:0 0 8px}h2{font-size:1.15rem;margin:0 0 12px}.sub,.muted{color:var(--muted)}.sub{margin:0 0 16px}
 .card{background:white;border:1px solid var(--line);border-radius:15px;padding:19px;margin:13px 0;box-shadow:0 3px 12px #17212f08}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.field label{display:block;font-weight:700;margin-bottom:6px}input,select{width:100%;min-height:44px;border:1px solid #aab5c4;border-radius:9px;padding:10px;font:inherit;background:white;color:var(--ink)}button{font:inherit;font-weight:700;border:0;border-radius:9px;padding:12px 16px;cursor:pointer;background:var(--blue);color:white}.secondary{background:#e8edf4;color:var(--ink)}.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
 .results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.metric{background:var(--panel);border-radius:12px;padding:15px}.name{font-size:.9rem;font-weight:750;color:var(--muted)}.value{font-size:1.8rem;font-weight:800;letter-spacing:-.03em}.desc{font-size:.9rem;margin-top:7px}.desc strong{display:block;margin-top:7px}.callout{background:var(--warn);border:1px solid #e7cd82;border-radius:10px;padding:13px}
 table{width:100%;border-collapse:collapse}th,td{text-align:left;vertical-align:top;padding:9px 7px;border-bottom:1px solid var(--line)}th{font-size:.9rem}ul,ol{padding-left:22px}li{margin:7px 0}.formula{overflow-wrap:anywhere;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9rem}footer{font-size:.82rem;color:var(--muted);padding:8px 2px 25px}
-@media(max-width:650px){.grid{grid-template-columns:1fr 1fr}}@media(max-width:440px){.grid,.results{grid-template-columns:1fr}.card{padding:15px}}
+@media(max-width:650px){.grid{grid-template-columns:1fr 1fr}.brand img{width:56px;height:56px;flex-basis:56px}}@media(max-width:440px){.grid,.results{grid-template-columns:1fr}.card{padding:15px}}
 @media print{body{background:#fff;font-size:10pt}main{max-width:none;margin:0;padding:0}.card{box-shadow:none;border:1px solid #bbb;padding:11px;margin:8px 0;break-inside:avoid}.actions{display:none}input,select{border:0;padding:2px 0;min-height:0;appearance:none}.results{grid-template-columns:repeat(2,minmax(0,1fr))}.metric{padding:9px}.value{font-size:15pt}.desc{font-size:8.5pt}}
 </style>
 </head>
 <body><main>
-<header><h1>Anestezi Ağırlık Hesaplayıcı</h1><p class="sub">TBW · IBW · LBW · AdjBW · BMI — mobil uyumlu, yazdırılabilir</p></header>
+<header class="brand"><img src="icon.svg" alt="Anestezi Ağırlık Hesaplayıcı logosu"><div><h1>Anestezi Ağırlık Hesaplayıcı</h1><p class="sub">TBW · IBW · LBW · AdjBW · BMI — mobil uyumlu, yazdırılabilir</p></div></header>
 <section class="card">
 <h2>Hasta bilgileri</h2><div class="grid">
 <div class="field"><label for="sex">Cinsiyet</label><select id="sex"><option value="male">Erkek</option><option value="female">Kadın</option></select></div>
