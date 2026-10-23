@@ -1,5 +1,5 @@
-const CACHE_NAME = "anestezi-agirlik-v1";
-const ASSETS = ["./", "./index.html", "./manifest.json", "./icon.svg"];
+const CACHE_NAME = "anestezi-agirlik-v2";
+const ASSETS = ["./", "./index.html", "./manifest.json", "./icon.svg?v=2"];
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting()));
 });
